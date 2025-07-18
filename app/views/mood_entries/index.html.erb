@@ -15,7 +15,9 @@
     <tbody>
         <% @mood_entries.each do |entry| %>
             <tr>
-                <td><%= entry.entry_date.strftime("%A, %b %d")%></td>
+                <td>
+                    <%= entry.entry_date.present? ? entry.entry_date.strftime("%A, %b %d") : "No date" %>
+                </td>
                 <td style="font-size: 24px;"><%= entry.mood %></td>
                 <td><%= entry.note %></td>
                 <td>

@@ -14,8 +14,10 @@
 
   <div>
     <%= form.label :note %>
-    <%= form.text_area :note %>
+    <%= form.text_area :note, maxlength: 200, id: "note_field", rows: 4, cols: 50 %>
+    <p id="char_count">0 / 200</p>
   </div>
+
 
   <div>
     <%= form.submit "Save" %>
