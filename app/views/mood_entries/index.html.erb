@@ -1,0 +1,28 @@
+<h1>My Mood Journal</h1>
+
+<p><%= link_to "New Entry", new_mood_entry_path %></p>
+
+<table>
+    <thead>
+        <tr>
+            <th>Date</th>
+            <th>Mood</th>
+            <th>Note</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+
+    <tbody>
+        <% @mood_entries.each do |entry| %>
+            <tr>
+                <td><%= entry.entry_date.strftime("%A, %b %d")%></td>
+                <td style="font-size: 24px;"><%= entry.mood %></td>
+                <td><%= entry.note %></td>
+                <td>
+                    <%= link_to "Edit", edit_mood_entry_path(entry) %> | 
+                    <%= link_to "Delete", mood_entry_path(entry), method: :delete, data: {confirm: "Are you sure?"} %>
+                </td>
+            </tr>
+        <% end %>
+    </tbody>
+</table>

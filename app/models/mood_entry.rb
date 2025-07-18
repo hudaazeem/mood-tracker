@@ -1,0 +1,2 @@
+class MoodEntry < ApplicationRecord
+end
