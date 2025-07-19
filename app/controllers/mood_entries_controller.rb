@@ -35,15 +35,20 @@ class MoodEntriesController < ApplicationController
   end
 
   def destroy
+    @mood_entry = MoodEntry.find(params[:id])
     @mood_entry.destroy
     redirect_to mood_entries_path, notice: 'Mood entry was successfully deleted.'
   end
+
+
+
 
   private
 
   def set_mood_entry
     @mood_entry = MoodEntry.find(params[:id])
   end
+
 
   def mood_entry_params
     params.require(:mood_entry).permit(:entry_date, :mood, :note)

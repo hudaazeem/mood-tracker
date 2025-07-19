@@ -8,3 +8,13 @@
  *
  * Consider organizing styles into separate files for maintainability.
  */
+
+ body {
+    background-color: red !important;
+    
+}
+
+h1{
+    color: blue !important;
+    font-size:  50px !important;
+}
