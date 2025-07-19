@@ -1,5 +1,16 @@
 <h1>Edit Mood Entry</h1>
 
+<% if @mood_entry.errors.any? %>
+    <div id="error_explanation">
+        <h2><%= pluralize(@mood_entry.errors.count, "error") %>prohibited</h2>
+        <ul>
+            <% @mood_entry.errors.full_messages.each do |msg|%>
+                <li><%= msg %></li>
+            <% end %>
+        </ul>
+    </div>
+<% end %>
+
 <%= render 'form', mood_entry: @mood_entry %>
 
 <%= link_to 'Back to Mood Journal', mood_entries_path %>
