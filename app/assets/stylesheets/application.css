@@ -19,7 +19,7 @@ h6{
 .delete-link {
   background: none;
   border: none;
-  color: #4B3832;
+  color: #574742;
   text-decoration: underline;
   cursor: pointer;
   font: inherit;
@@ -27,7 +27,7 @@ h6{
 }
 
 .delete-link:hover {
-  color: #0056b3;
+  color: #35260b;
 }
 
 table{
@@ -44,15 +44,19 @@ th, td {
 }
 
 thead{
-    background-color: #ffe4b5;
+    background-color: rgb(134, 79, 7);
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 20px;
 }
 
 tbody tr:nth-child(odd) {
-  background-color: #fff5e1;
+  background-color: #e4b56f;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 tbody tr:nth-child(even) {
-  background-color: #f7e4c5;
+  background-color: #fcd28e;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 
@@ -62,7 +66,7 @@ tbody tr:nth-child(even) {
 }
 
 .new-entry-link{
-    background-color: rgb(134, 79, 7);
+    background-color: rgb(203, 133, 41);
     color:black;
     border: none;
     padding: 10px 12px;
@@ -72,9 +76,17 @@ tbody tr:nth-child(even) {
     font-size: 14px;
     text-decoration: none;
     display:inline-block;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 .new-entry-link:hover{
-    background-color:#4B3832;
+    background-color:#935c2f;
 }
 
+.edit-link{
+    color: #574742;
+}
+
+.edit-link:hover{
+    color: #35260b;
+}

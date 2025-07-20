@@ -24,7 +24,7 @@
                 <td style="font-size: 24px;"><%= entry.mood %></td>
                 <td><%= entry.note %></td>
                 <td>
-                    <%= link_to "Edit", edit_mood_entry_path(entry), method: :get, form: { style: "display: inline" }%>
+                    <%= link_to "Edit", edit_mood_entry_path(entry), method: :get, form: { style: "display: inline" }, class:"edit-link"%>
                     <%= button_to "Delete", mood_entry_path(entry), method: :delete, data: { turbo_confirm: "Are you sure?" }, form: { style: "display: inline" }, class: "delete-link" %>
                 </td>
 

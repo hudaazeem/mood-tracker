@@ -14,6 +14,7 @@ class MoodEntriesController < ApplicationController
 
 
   def edit
+    @mood_entry = MoodEntry.find(params[:id])
   end
 
   def create
@@ -28,7 +29,7 @@ class MoodEntriesController < ApplicationController
 
   def update
     if @mood_entry.update(mood_entry_params)
-      redirect_to mood_entries_path, notice: 'Mood entry was successfully updated.'
+      redirect_to mood_entries_path, notice: "Mood entry was successfully updated."
     else
       render :edit, status: :unprocessable_entity
     end
@@ -37,7 +38,7 @@ class MoodEntriesController < ApplicationController
   def destroy
     @mood_entry = MoodEntry.find(params[:id])
     @mood_entry.destroy
-    redirect_to mood_entries_path, notice: 'Mood entry was successfully deleted.'
+    redirect_to mood_entries_path, notice: "Mood entry was successfully deleted."
   end
 
 
