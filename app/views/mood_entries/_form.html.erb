@@ -1,21 +1,21 @@
 
 <%= form_with(model: mood_entry, local: true) do |form| %>
-  <div>
+  <div class="enter">
     <%= form.label :entry_date %>
     <%= form.date_field :entry_date, required: true %>
   </div>
 
-  <div>
+  <div class="enter">
     <%= form.label :mood %>
-    <%= form.select :mood, ["😊", "😐", "😢", "😡", "😰"], prompt: "Select your mood", required: true %>
+    <%= form.select :mood -, ["😊", "😐", "😢", "😡", "😰"], prompt: "Select your mood", required: true %>
   </div>
 
-  <div>
+  <div class="enter">
     <%= form.label :note %>
     <%= form.text_area :note, maxlength: 150, required: true %>
   </div>
 
-  <div>
+  <div class="enter">
     <%= form.submit "Save" %>
   </div>
 <% end %>

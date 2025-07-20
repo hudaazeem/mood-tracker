@@ -90,3 +90,8 @@ tbody tr:nth-child(even) {
 .edit-link:hover{
     color: #35260b;
 }
+
+.center{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin-bottom: 7px;
+}
