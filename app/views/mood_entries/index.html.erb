@@ -1,6 +1,9 @@
-<h1>⋆⁺₊⋆My Mood Journal⋆⁺₊⋆</h1>
+<h1>⋆⁺₊⋆My Mood Journal⋆₊⁺⋆</h1>
 
-<p><%= link_to "New Entry", new_mood_entry_path %></p>
+<h6 class="intro-text"><i>Welcome! Track your emotions every day and reflect on your mood over time :) </i></h6>
+
+<%= link_to "New Entry", new_mood_entry_path, class:"new-entry-link" %>
+
 
 <table>
     <thead>
@@ -20,10 +23,9 @@
                 </td>
                 <td style="font-size: 24px;"><%= entry.mood %></td>
                 <td><%= entry.note %></td>
-                
                 <td>
-                    <%= link_to "Edit", edit_mood_entry_path(entry), method: :get, form: { style: "display: inline" }, class: "action-btn" %>
-                    <%= button_to "Delete", mood_entry_path(entry), method: :delete, data: { turbo_confirm: "Are you sure?" }, form: { style: "display: inline" }, class: "action-link" %>
+                    <%= link_to "Edit", edit_mood_entry_path(entry), method: :get, form: { style: "display: inline" }%>
+                    <%= button_to "Delete", mood_entry_path(entry), method: :delete, data: { turbo_confirm: "Are you sure?" }, form: { style: "display: inline" }, class: "delete-link" %>
                 </td>
 
             </tr>
